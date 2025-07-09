@@ -13,3 +13,4 @@
 /Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Client/obj/Debug/net9.0/refint/MessageBroadcast.Client.dll
 /Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Client/obj/Debug/net9.0/MessageBroadcast.Client.pdb
 /Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Client/obj/Debug/net9.0/ref/MessageBroadcast.Client.dll
+/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Client/obj/Debug/net9.0/MessageBroadcast.Client.sourcelink.json
