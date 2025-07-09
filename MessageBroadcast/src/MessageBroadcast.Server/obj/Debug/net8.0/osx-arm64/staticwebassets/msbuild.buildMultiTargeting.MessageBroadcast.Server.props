@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/MessageBroadcast.Server.props" />
-</Project>
