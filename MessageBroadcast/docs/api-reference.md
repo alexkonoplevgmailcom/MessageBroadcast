@@ -1,86 +1,319 @@
-# API Reference for MessageBroadcast
+# MessageBroadcast API Reference
 
 ## Overview
 
-The MessageBroadcast system allows a single publisher to send messages to multiple subscribers efficiently. This document provides a reference for the API endpoints and methods available in both the server and client libraries.
+The MessageBroadcast system provides a high-performance, real-time message broadcasting solution using SignalR and .NET 9. This document details the complete API surface for both server and client components.
 
-## Server API
+## 🏗️ System Architecture
 
-### MessageHub
+The system consists of three main components:
+- **Server**: SignalR hub for message broadcasting
+- **Client Library**: Publisher and subscriber client implementations  
+- **Shared Contracts**: Common interfaces and message protocols
 
-The `MessageHub` is the central hub for real-time communication between the server and clients. It uses SignalR to facilitate message broadcasting.
+## 🖥️ Server API
+
+### MessageHub (SignalR Hub)
+
+The core SignalR hub that handles real-time communication between publishers and subscribers.
+
+**Hub Endpoint**: `/messagehub`
+
+#### Hub Methods
+
+##### `JoinGroup(string groupName)`
+- **Description**: Joins a client to a specific message group
+- **Parameters**: 
+  - `groupName` (string): Name of the group to join
+- **Returns**: `Task`
+- **Usage**: Automatically called by client library
+
+##### `LeaveGroup(string groupName)`
+- **Description**: Removes a client from a message group
+- **Parameters**:
+  - `groupName` (string): Name of the group to leave  
+- **Returns**: `Task`
+- **Usage**: Automatically called by client library
+
+#### Hub Events (Server → Client)
+
+##### `ReceiveMessage(Message message)`
+- **Description**: Broadcasts a message to all subscribers
+- **Parameters**:
+  - `message` (Message): The message object containing content and metadata
+- **Triggered**: When a publisher sends a message
+
+##### `NotifyConnectionUpdate(string connectionId, bool connected)`
+- **Description**: Notifies about connection status changes
+- **Parameters**:
+  - `connectionId` (string): The SignalR connection identifier
+  - `connected` (bool): Connection status (true = connected, false = disconnected)
+
+### BroadcastService
+
+Core service responsible for message processing and distribution.
 
 #### Methods
 
-- **SendMessage**
-  - **Description**: Sends a message from the publisher to all connected subscribers.
-  - **Parameters**:
-    - `Message message`: The message object containing the content, sender ID, and timestamp.
-  - **Returns**: `Task`
+##### `BroadcastMessageAsync(Message message)`
+- **Description**: Processes and broadcasts a message to all connected subscribers
+- **Parameters**:
+  - `message` (Message): Message to broadcast
+- **Returns**: `Task`
+- **Features**: Zero-copy broadcasting for optimal performance
 
-### Connection Management
+##### `GetConnectionCountAsync()`
+- **Description**: Returns the current number of active connections
+- **Returns**: `Task<int>`
 
-The server manages connections through the `ConnectionManager` service, which tracks active subscribers.
+### ConnectionManager
+
+Manages SignalR connections and client tracking.
 
 #### Methods
 
-- **AddConnection**
-  - **Description**: Adds a new subscriber connection.
-  - **Parameters**:
-    - `Client client`: The client object representing the subscriber.
-  - **Returns**: `void`
+##### `AddConnectionAsync(string connectionId, Client client)`
+- **Description**: Registers a new client connection
+- **Parameters**:
+  - `connectionId` (string): SignalR connection identifier
+  - `client` (Client): Client information object
+- **Returns**: `Task`
 
-- **RemoveConnection**
-  - **Description**: Removes a subscriber connection.
-  - **Parameters**:
-    - `string connectionId`: The connection ID of the subscriber to be removed.
-  - **Returns**: `void`
+##### `RemoveConnectionAsync(string connectionId)`
+- **Description**: Unregisters a client connection
+- **Parameters**:
+  - `connectionId` (string): Connection identifier to remove
+- **Returns**: `Task`
 
-## Client API
+##### `GetActiveConnectionsAsync()`
+- **Description**: Retrieves all active client connections
+- **Returns**: `Task<IEnumerable<Client>>`
+
+## 📱 Client API
 
 ### MessageBroadcastClient
 
-The `MessageBroadcastClient` library provides methods for publishers and subscribers to interact with the MessageBroadcast server.
+Main client class implementing both publisher and subscriber functionality.
 
-#### Publisher Methods
+#### Constructor
 
-- **PublishMessage**
-  - **Description**: Publishes a message to the server.
-  - **Parameters**:
-    - `BroadcastMessage message`: The message object to be sent.
-  - **Returns**: `Task`
+##### `MessageBroadcastClient(string serverUrl)`
+- **Parameters**:
+  - `serverUrl` (string): Base URL of the MessageBroadcast server
+- **Example**: `new MessageBroadcastClient("http://localhost:5001")`
 
-#### Subscriber Methods
+#### Connection Management
 
-- **SubscribeToMessages**
-  - **Description**: Subscribes to receive messages from the server.
-  - **Parameters**:
-    - `Action<BroadcastMessage> onMessageReceived`: Callback to handle received messages.
-  - **Returns**: `Task`
+##### `ConnectAsync(CancellationToken cancellationToken = default)`
+- **Description**: Establishes connection to the SignalR hub
+- **Returns**: `Task`
+- **Features**: 
+  - Automatic reconnection on connection loss
+  - Configurable retry policies
+  - Connection state management
 
-- **Unsubscribe**
-  - **Description**: Unsubscribes from receiving messages.
-  - **Returns**: `Task`
+##### `DisconnectAsync()`
+- **Description**: Gracefully disconnects from the server
+- **Returns**: `Task`
 
-## Message Structure
+##### `IsConnected`
+- **Description**: Gets the current connection status
+- **Returns**: `bool`
 
-### Message
+#### Publisher Interface (IMessagePublisher)
 
-The `Message` model represents the structure of a message in the system.
+##### `PublishMessageAsync(string content, string senderId, CancellationToken cancellationToken = default)`
+- **Description**: Publishes a message for broadcasting
+- **Parameters**:
+  - `content` (string): Message content
+  - `senderId` (string): Identifier of the message sender
+  - `cancellationToken` (CancellationToken): Optional cancellation token
+- **Returns**: `Task`
+- **Performance**: Fire-and-forget with minimal latency
 
-- **Properties**:
-  - `string Content`: The content of the message.
-  - `string SenderId`: The ID of the sender.
-  - `DateTime Timestamp`: The time the message was sent.
+##### `PublishMessageAsync(BroadcastMessage message, CancellationToken cancellationToken = default)`
+- **Description**: Publishes a pre-constructed message object
+- **Parameters**:
+  - `message` (BroadcastMessage): Complete message object
+  - `cancellationToken` (CancellationToken): Optional cancellation token
+- **Returns**: `Task`
 
-### BroadcastMessage
+#### Subscriber Interface (IMessageSubscriber)
 
-The `BroadcastMessage` model is used by the client and mirrors the server's `Message` model.
+##### `SubscribeToMessagesAsync(Action<BroadcastMessage> onMessageReceived, CancellationToken cancellationToken = default)`
+- **Description**: Subscribes to receive real-time messages
+- **Parameters**:
+  - `onMessageReceived` (Action<BroadcastMessage>): Callback for processing received messages
+  - `cancellationToken` (CancellationToken): Optional cancellation token
+- **Returns**: `Task`
+- **Features**: Real-time message delivery with automatic reconnection
 
-## Protocol
+##### `UnsubscribeAsync()`
+- **Description**: Stops receiving messages and leaves subscriber group
+- **Returns**: `Task`
 
-The `MessageProtocol` defines the format for messages exchanged between the publisher and subscribers, ensuring efficient communication.
+## 📋 Data Models
 
-## Conclusion
+### Message (Server Model)
 
-This API reference provides a comprehensive overview of the methods and structures used in the MessageBroadcast system. For further details on implementation and usage, please refer to the respective sections in the documentation.
+Core server-side message representation.
+
+```csharp
+public class Message
+{
+    public string Content { get; set; }      // Message content
+    public string SenderId { get; set; }     // Publisher identifier  
+    public DateTime Timestamp { get; set; }  // Server timestamp
+    public string MessageId { get; set; }    // Unique message identifier
+}
+```
+
+### BroadcastMessage (Client Model)
+
+Client-side message representation mirroring the server model.
+
+```csharp
+public class BroadcastMessage
+{
+    public string Content { get; set; }      // Message content
+    public string SenderId { get; set; }     // Publisher identifier
+    public DateTime Timestamp { get; set; }  // Message timestamp
+    public string MessageId { get; set; }    // Unique message identifier
+}
+```
+
+### Client (Connection Model)
+
+Represents a connected client for tracking purposes.
+
+```csharp
+public class Client
+{
+    public string ConnectionId { get; set; }   // SignalR connection ID
+    public string ClientId { get; set; }       // Client identifier
+    public DateTime ConnectedAt { get; set; }  // Connection timestamp
+    public ClientType Type { get; set; }       // Publisher or Subscriber
+}
+```
+
+## 🔗 Interfaces
+
+### IMessagePublisher
+
+```csharp
+public interface IMessagePublisher
+{
+    Task PublishMessageAsync(string content, string senderId, CancellationToken cancellationToken = default);
+    Task PublishMessageAsync(BroadcastMessage message, CancellationToken cancellationToken = default);
+}
+```
+
+### IMessageSubscriber
+
+```csharp
+public interface IMessageSubscriber
+{
+    Task SubscribeToMessagesAsync(Action<BroadcastMessage> onMessageReceived, CancellationToken cancellationToken = default);
+    Task UnsubscribeAsync();
+}
+```
+
+## 🔧 Configuration
+
+### Server Configuration (appsettings.json)
+
+```json
+{
+  "Server": {
+    "Port": 5001,
+    "HttpsPort": 5002,
+    "MaxConcurrentConnections": 1000,
+    "KeepAliveIntervalSeconds": 15,
+    "ClientTimeoutIntervalSeconds": 30,
+    "EnableDetailedErrors": false,
+    "LogConnections": true
+  }
+}
+```
+
+### Client Configuration
+
+```csharp
+var client = new MessageBroadcastClient("http://localhost:5001");
+
+// Configure connection options
+client.Connection.HandshakeTimeout = TimeSpan.FromSeconds(30);
+client.Connection.KeepAliveInterval = TimeSpan.FromSeconds(15);
+client.Connection.ServerTimeout = TimeSpan.FromSeconds(30);
+```
+
+## 🚨 Error Handling
+
+### Common Exceptions
+
+- **`HubException`**: SignalR hub-specific errors
+- **`TimeoutException`**: Connection or operation timeout
+- **`InvalidOperationException`**: Invalid client state operations
+- **`ArgumentException`**: Invalid parameters
+
+### Best Practices
+
+```csharp
+try
+{
+    await client.ConnectAsync();
+    await client.PublishMessageAsync("Hello World", "Publisher1");
+}
+catch (HubException ex)
+{
+    // Handle SignalR-specific errors
+    Console.WriteLine($"Hub error: {ex.Message}");
+}
+catch (TimeoutException ex)
+{
+    // Handle timeout scenarios
+    Console.WriteLine($"Operation timed out: {ex.Message}");
+}
+```
+
+## 📊 Performance Considerations
+
+### Throughput Optimization
+- Use `PublishMessageAsync` with pre-constructed `BroadcastMessage` objects
+- Implement connection pooling for multiple publishers
+- Configure appropriate buffer sizes for high-volume scenarios
+
+### Memory Management
+- Dispose of `MessageBroadcastClient` instances properly
+- Use `CancellationToken` for long-running operations
+- Monitor connection counts to prevent resource leaks
+
+## 🔍 Health Monitoring
+
+### Server Health Endpoint
+
+```http
+GET /health
+Response: "OK" (200 OK)
+```
+
+### Connection Monitoring
+
+```csharp
+// Check connection status
+if (client.IsConnected)
+{
+    // Perform operations
+}
+
+// Monitor connection events
+client.Closed += async (error) =>
+{
+    Console.WriteLine("Connection lost, attempting to reconnect...");
+    await client.ConnectAsync();
+};
+```
+
+---
+
+This API reference provides comprehensive coverage of the MessageBroadcast system's functionality. For implementation examples and deployment guidance, refer to the main [README](../README.md) and [Deployment Guide](deployment.md).
