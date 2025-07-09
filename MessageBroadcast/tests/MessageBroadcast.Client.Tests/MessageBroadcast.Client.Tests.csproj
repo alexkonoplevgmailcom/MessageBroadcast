@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>MessageBroadcast.Client.Tests</RootNamespace>
+    <AssemblyName>MessageBroadcast.Client.Tests</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MessageBroadcast.Client\MessageBroadcast.Client.csproj" />
+    <ProjectReference Include="..\MessageBroadcast.Shared\MessageBroadcast.Shared.csproj" />
+    <ProjectReference Include="..\MessageBroadcast.Server.Tests\MessageBroadcast.Server.Tests.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
+    <PackageReference Include="Moq" Version="4.18.2" />
+    <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5" />
+  </ItemGroup>
+
+</Project>

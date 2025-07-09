@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "WHj634WtAUc=",
+  "success": true,
+  "projectFilePath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Server/MessageBroadcast.Server.csproj",
+  "expectedPackageFiles": [
+    "/Users/alexk/.nuget/packages/microsoft.net.illink.tasks/9.0.6/microsoft.net.illink.tasks.9.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}

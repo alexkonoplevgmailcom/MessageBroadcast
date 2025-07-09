@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "CmBWMR71VeaoxO1sG1angPHF3wlSTKtjyW+gz4Hj9bE=",
+  "Source": "MessageBroadcast.Server",
+  "BasePath": "_content/MessageBroadcast.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

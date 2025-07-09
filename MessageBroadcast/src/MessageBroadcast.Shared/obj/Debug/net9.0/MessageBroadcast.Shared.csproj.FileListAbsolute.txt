@@ -1,0 +1,11 @@
+/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/bin/Debug/net9.0/MessageBroadcast.Shared.deps.json
+/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/bin/Debug/net9.0/MessageBroadcast.Shared.dll
+/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/bin/Debug/net9.0/MessageBroadcast.Shared.pdb
+/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/obj/Debug/net9.0/MessageBroadcast.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/obj/Debug/net9.0/MessageBroadcast.Shared.AssemblyInfoInputs.cache
+/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/obj/Debug/net9.0/MessageBroadcast.Shared.AssemblyInfo.cs
+/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/obj/Debug/net9.0/MessageBroadcast.Shared.csproj.CoreCompileInputs.cache
+/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/obj/Debug/net9.0/MessageBroadcast.Shared.dll
+/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/obj/Debug/net9.0/refint/MessageBroadcast.Shared.dll
+/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/obj/Debug/net9.0/MessageBroadcast.Shared.pdb
+/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/obj/Debug/net9.0/ref/MessageBroadcast.Shared.dll

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "MessageBroadcast.Shared/1.0.0": {
+        "runtime": {
+          "MessageBroadcast.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MessageBroadcast.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
