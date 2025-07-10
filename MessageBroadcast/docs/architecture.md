@@ -1,7 +1,7 @@
 # MessageBroadcast System Architecture
 
 ## 🏗️ Overview
-The MessageBroadcast system is a high-performance, real-time message broadcasting solution designed for standalone environments. Built with .NET 9 and SignalR, it enables efficient one-to-many message distribution without external dependencies, achieving **500+ messages per second** with **17,000+ deliveries per second**.
+The MessageBroadcast system is a high-performance, real-time message broadcasting solution designed for standalone environments. Built with .NET 8 and SignalR, it enables efficient one-to-many message distribution without external dependencies, achieving **500+ messages per second** with **17,000+ deliveries per second**.
 
 ## 🎯 Design Principles
 

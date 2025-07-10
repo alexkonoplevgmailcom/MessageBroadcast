@@ -4,12 +4,12 @@ Thank you for your interest in contributing to MessageBroadcast! This guide will
 
 ## 🎯 Project Overview
 
-MessageBroadcast is a production-ready, high-performance message broadcasting system built with .NET 9 and SignalR. Our goal is to maintain a clean, efficient, and well-documented codebase that serves as a reference implementation for real-time messaging systems.
+MessageBroadcast is a production-ready, high-performance message broadcasting system built with .NET 8 and SignalR. Our goal is to maintain a clean, efficient, and well-documented codebase that serves as a reference implementation for real-time messaging systems.
 
 ## 🚀 Quick Start for Contributors
 
 ### Prerequisites
-- [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) (latest stable version)
+- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) (latest stable version)
 - [Git](https://git-scm.com/) for version control
 - IDE: [Visual Studio 2022](https://visualstudio.microsoft.com/), [VS Code](https://code.visualstudio.com/), or [JetBrains Rider](https://www.jetbrains.com/rider/)
 

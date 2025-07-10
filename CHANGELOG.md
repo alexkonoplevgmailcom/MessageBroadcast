@@ -7,7 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- **BREAKING**: Migrated from .NET 9 to .NET 8 for better stability and compatibility
+- Updated all NuGet packages to latest .NET 8 compatible versions
+- Enhanced load test framework with HTML report generation and automatic browser opening
+- Improved Windows Service management automation
+- Added comprehensive .NET 9 removal scripts and documentation
+
 ### Added
+- **LoadTestRunner.cs**: Enhanced with HTML report generation and automatic browser opening
+- **global.json**: SDK version lock to .NET 8.0.0
+- **Directory.Build.props**: Centralized .NET 8 package management
+- **Remove-DotNet9-Complete.ps1**: Comprehensive .NET 9 removal script
+- **NET9_REMOVAL_INSTRUCTIONS.md**: Step-by-step .NET 9 removal guide
+- **DOTNET8_COMPATIBILITY.md**: Package compatibility documentation
 - Windows Service management automation with batch and PowerShell scripts
 - Comprehensive deployment guide for all major platforms
 - Docker deployment support with multi-stage builds
@@ -17,11 +30,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Security hardening guidelines
 - Performance optimization recommendations
 
-### Changed
-- Updated to .NET 9 for latest performance improvements
-- Enhanced API documentation with complete examples
-- Improved architecture documentation with performance metrics
-- Expanded contributing guidelines for open source collaboration
+### Fixed
+- All project files now correctly target net8.0
+- Package compatibility issues resolved
+- GitHub CLI authentication integration
 
 ### Performance
 - Validated 591+ messages/second send rate

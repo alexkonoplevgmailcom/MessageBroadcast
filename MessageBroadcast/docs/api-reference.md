@@ -2,7 +2,7 @@
 
 ## Overview
 
-The MessageBroadcast system provides a high-performance, real-time message broadcasting solution using SignalR and .NET 9. This document details the complete API surface for both server and client components.
+The MessageBroadcast system provides a high-performance, real-time message broadcasting solution using SignalR and .NET 8. This document details the complete API surface for both server and client components.
 
 ## 🏗️ System Architecture
 

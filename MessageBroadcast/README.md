@@ -2,10 +2,10 @@
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/your-username/MessageBroadcast)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![.NET 9](https://img.shields.io/badge/.NET-9.0-blue)](https://dotnet.microsoft.com/download/dotnet/9.0)
+[![.NET 8](https://img.shields.io/badge/.NET-8.0-blue)](https://dotnet.microsoft.com/download/dotnet/8.0)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](https://github.com/dotnet/core/blob/main/release-notes/8.0/supported-os.md)
 
-A **high-performance, standalone message broadcasting system** built with .NET 9 and SignalR. Designed to run on Windows, macOS, and Linux without external network dependencies, supporting **hundreds of messages per second** in a fire-and-forget pattern.
+A **high-performance, standalone message broadcasting system** built with .NET 8 and SignalR. Designed to run on Windows, macOS, and Linux without external network dependencies, supporting **hundreds of messages per second** in a fire-and-forget pattern.
 
 ## 🎯 Perfect For
 
@@ -63,7 +63,7 @@ Our latest load tests demonstrate exceptional performance:
 ## 🚀 Quick Start
 
 ### Prerequisites
-- [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) or later
+- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later
 - Any modern IDE (Visual Studio, VS Code, JetBrains Rider)
 
 ### 1. Clone and Build
@@ -320,13 +320,13 @@ dotnet run http://localhost:5001 30 50 300 60
 ## 🖥️ System Requirements
 
 ### Minimum Requirements
-- **.NET 9 Runtime** (or SDK for development)
+- **.NET 8 Runtime** (or SDK for development)
 - **Memory**: 512MB RAM
 - **Network**: Local network access (no internet required)
 - **Storage**: 50MB disk space
 
 ### Recommended Requirements  
-- **.NET 9 SDK** (latest version)
+- **.NET 8 SDK** (latest version)
 - **Memory**: 1GB+ RAM for high throughput scenarios
 - **CPU**: 2+ cores for optimal performance
 - **Network**: Gigabit network for maximum throughput
@@ -393,7 +393,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 🏆 Acknowledgments
 
-- Built with [.NET 9](https://dotnet.microsoft.com/)
+- Built with [.NET 8](https://dotnet.microsoft.com/)
 - Powered by [SignalR](https://docs.microsoft.com/aspnet/signalr/)
 - Tested with [xUnit](https://xunit.net/)
 - Performance validated through comprehensive load testing

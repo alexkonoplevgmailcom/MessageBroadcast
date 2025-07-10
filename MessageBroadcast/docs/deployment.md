@@ -6,14 +6,14 @@ This comprehensive guide covers deploying the MessageBroadcast server across mul
 ## 🔧 Prerequisites
 
 ### System Requirements
-- **.NET 9 Runtime** (for running pre-built binaries) or **.NET 9 SDK** (for building from source)
+- **.NET 8 Runtime** (for running pre-built binaries) or **.NET 8 SDK** (for building from source)
 - **Memory**: Minimum 512MB RAM (recommended 1GB+ for high throughput)
 - **Disk Space**: 100MB for application files and logs
 - **Network**: Local network access (no internet connectivity required)
 - **Ports**: Default HTTP 5001, HTTPS 5002 (configurable)
 
 ### Development Requirements (Building from Source)
-- **.NET 9 SDK** (latest stable version)
+- **.NET 8 SDK** (latest stable version)
 - **IDE**: Visual Studio 2022, VS Code, or JetBrains Rider
 - **Git**: For source code management
 
