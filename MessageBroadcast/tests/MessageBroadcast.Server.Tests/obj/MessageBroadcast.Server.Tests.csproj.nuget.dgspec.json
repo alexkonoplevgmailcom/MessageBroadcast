@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/tests/MessageBroadcast.Server.Tests/MessageBroadcast.Server.Tests.csproj": {}
+    "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\tests\\MessageBroadcast.Server.Tests\\MessageBroadcast.Server.Tests.csproj": {}
   },
   "projects": {
-    "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Server/MessageBroadcast.Server.csproj": {
+    "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\src\\MessageBroadcast.Server\\MessageBroadcast.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Server/MessageBroadcast.Server.csproj",
+        "projectUniqueName": "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\src\\MessageBroadcast.Server\\MessageBroadcast.Server.csproj",
         "projectName": "MessageBroadcast.Server",
-        "projectPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Server/MessageBroadcast.Server.csproj",
-        "packagesPath": "/Users/alexk/.nuget/packages/",
-        "outputPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Server/obj/",
+        "projectPath": "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\src\\MessageBroadcast.Server\\MessageBroadcast.Server.csproj",
+        "packagesPath": "C:\\Users\\FIBI\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\src\\MessageBroadcast.Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alexk/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\FIBI\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/MessageBroadcast.Shared.csproj": {
-                "projectPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/MessageBroadcast.Shared.csproj"
+              "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\src\\MessageBroadcast.Shared\\MessageBroadcast.Shared.csproj": {
+                "projectPath": "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\src\\MessageBroadcast.Shared\\MessageBroadcast.Shared.csproj"
               }
             }
           }
@@ -50,7 +50,7 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.11, )",
+              "version": "[8.0.17, )",
               "autoReferenced": true
             }
           },
@@ -67,12 +67,16 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.AspNetCore.App.Runtime.osx-arm64",
-              "version": "[8.0.11, 8.0.11]"
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[8.0.17, 8.0.17]"
             },
             {
-              "name": "Microsoft.NETCore.App.Runtime.osx-arm64",
-              "version": "[8.0.11, 8.0.11]"
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[8.0.17, 8.0.17]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[8.0.17, 8.0.17]"
             }
           ],
           "frameworkReferences": {
@@ -83,26 +87,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/alexk/.dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.411/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
-        "osx-arm64": {
+        "win-x64": {
           "#import": []
         }
       }
     },
-    "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/MessageBroadcast.Shared.csproj": {
+    "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\src\\MessageBroadcast.Shared\\MessageBroadcast.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/MessageBroadcast.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\src\\MessageBroadcast.Shared\\MessageBroadcast.Shared.csproj",
         "projectName": "MessageBroadcast.Shared",
-        "projectPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/MessageBroadcast.Shared.csproj",
-        "packagesPath": "/Users/alexk/.nuget/packages/",
-        "outputPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/obj/",
+        "projectPath": "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\src\\MessageBroadcast.Shared\\MessageBroadcast.Shared.csproj",
+        "packagesPath": "C:\\Users\\FIBI\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\src\\MessageBroadcast.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alexk/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\FIBI\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -146,21 +150,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/alexk/.dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.411/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/tests/MessageBroadcast.Server.Tests/MessageBroadcast.Server.Tests.csproj": {
+    "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\tests\\MessageBroadcast.Server.Tests\\MessageBroadcast.Server.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/tests/MessageBroadcast.Server.Tests/MessageBroadcast.Server.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\tests\\MessageBroadcast.Server.Tests\\MessageBroadcast.Server.Tests.csproj",
         "projectName": "MessageBroadcast.Server.Tests",
-        "projectPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/tests/MessageBroadcast.Server.Tests/MessageBroadcast.Server.Tests.csproj",
-        "packagesPath": "/Users/alexk/.nuget/packages/",
-        "outputPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/tests/MessageBroadcast.Server.Tests/obj/",
+        "projectPath": "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\tests\\MessageBroadcast.Server.Tests\\MessageBroadcast.Server.Tests.csproj",
+        "packagesPath": "C:\\Users\\FIBI\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\tests\\MessageBroadcast.Server.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alexk/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\FIBI\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -172,11 +176,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Server/MessageBroadcast.Server.csproj": {
-                "projectPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Server/MessageBroadcast.Server.csproj"
+              "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\src\\MessageBroadcast.Server\\MessageBroadcast.Server.csproj": {
+                "projectPath": "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\src\\MessageBroadcast.Server\\MessageBroadcast.Server.csproj"
               },
-              "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/MessageBroadcast.Shared.csproj": {
-                "projectPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/MessageBroadcast.Shared.csproj"
+              "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\src\\MessageBroadcast.Shared\\MessageBroadcast.Shared.csproj": {
+                "projectPath": "C:\\Users\\FIBI\\Repos\\alexkonoplevgmailcom\\MessageBroadcast\\MessageBroadcast\\src\\MessageBroadcast.Shared\\MessageBroadcast.Shared.csproj"
               }
             }
           }
@@ -198,19 +202,19 @@
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[17.5.0, )"
+              "version": "[17.11.1, )"
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.18.2, )"
+              "version": "[4.20.72, )"
             },
             "xunit": {
               "target": "Package",
-              "version": "[2.4.2, )"
+              "version": "[2.9.2, )"
             },
             "xunit.runner.visualstudio": {
               "target": "Package",
-              "version": "[2.4.5, )"
+              "version": "[2.8.2, )"
             }
           },
           "imports": [
@@ -229,7 +233,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/alexk/.dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.411/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,22 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn> <!-- Missing XML documentation warnings -->
+  </PropertyGroup>
+
+  <!-- Package version management for consistent .NET 8 compatibility -->
+  <ItemGroup>
+    <PackageReference Update="Microsoft.AspNetCore.SignalR.Client" Version="8.0.8" />
+    <PackageReference Update="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Update="Moq" Version="4.20.72" />
+    <PackageReference Update="xunit" Version="2.9.2" />
+    <PackageReference Update="xunit.runner.visualstudio" Version="2.8.2" />
+    <PackageReference Update="System.Diagnostics.PerformanceCounter" Version="8.0.0" />
+  </ItemGroup>
+</Project>
