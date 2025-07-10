@@ -1,14 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>MessageBroadcast.Client.Tests</RootNamespace>
     <AssemblyName>MessageBroadcast.Client.Tests</AssemblyName>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MessageBroadcast.Client\MessageBroadcast.Client.csproj" />
-    <ProjectReference Include="..\MessageBroadcast.Shared\MessageBroadcast.Shared.csproj" />
+    <ProjectReference Include="..\..\src\MessageBroadcast.Client\MessageBroadcast.Client.csproj" />
+    <ProjectReference Include="..\..\src\MessageBroadcast.Shared\MessageBroadcast.Shared.csproj" />
     <ProjectReference Include="..\MessageBroadcast.Server.Tests\MessageBroadcast.Server.Tests.csproj" />
   </ItemGroup>
 
