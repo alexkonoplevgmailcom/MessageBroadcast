@@ -34,3 +34,4 @@
 /Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/samples/Publisher.Sample/obj/Debug/net8.0/Publisher.Sample.pdb
 /Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/samples/Publisher.Sample/obj/Debug/net8.0/Publisher.Sample.genruntimeconfig.cache
 /Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/samples/Publisher.Sample/obj/Debug/net8.0/ref/Publisher.Sample.dll
+/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/samples/Publisher.Sample/obj/Debug/net8.0/Publisher.Sample.sourcelink.json

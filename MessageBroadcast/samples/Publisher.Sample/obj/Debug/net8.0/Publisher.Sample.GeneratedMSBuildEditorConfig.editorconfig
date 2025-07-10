@@ -11,5 +11,3 @@ build_property.RootNamespace = Publisher.Sample
 build_property.ProjectDir = /Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/samples/Publisher.Sample/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.EffectiveAnalysisLevelStyle = 8.0
-build_property.EnableCodeStyleSeverity = 

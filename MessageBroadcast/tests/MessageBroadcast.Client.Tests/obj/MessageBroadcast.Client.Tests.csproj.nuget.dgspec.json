@@ -4,28 +4,27 @@
     "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/tests/MessageBroadcast.Client.Tests/MessageBroadcast.Client.Tests.csproj": {}
   },
   "projects": {
-    "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Server/MessageBroadcast.Server.csproj": {
+    "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Client/MessageBroadcast.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Server/MessageBroadcast.Server.csproj",
-        "projectName": "MessageBroadcast.Server",
-        "projectPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Server/MessageBroadcast.Server.csproj",
+        "projectUniqueName": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Client/MessageBroadcast.Client.csproj",
+        "projectName": "MessageBroadcast.Client",
+        "projectPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Client/MessageBroadcast.Client.csproj",
         "packagesPath": "/Users/alexk/.nuget/packages/",
-        "outputPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Server/obj/",
+        "outputPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Client/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/alexk/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
-          "/opt/homebrew/Cellar/dotnet/9.0.6/libexec/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {
               "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/MessageBroadcast.Shared.csproj": {
                 "projectPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/MessageBroadcast.Shared.csproj"
@@ -42,18 +41,19 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.NET.ILLink.Tasks": {
-              "suppressParent": "All",
+            "Microsoft.AspNetCore.SignalR.Client": {
               "target": "Package",
-              "version": "[9.0.6, )",
-              "autoReferenced": true
+              "version": "[8.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
@@ -68,6 +68,86 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/alexk/.dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Server/MessageBroadcast.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Server/MessageBroadcast.Server.csproj",
+        "projectName": "MessageBroadcast.Server",
+        "projectPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Server/MessageBroadcast.Server.csproj",
+        "packagesPath": "/Users/alexk/.nuget/packages/",
+        "outputPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Server/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alexk/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/MessageBroadcast.Shared.csproj": {
+                "projectPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/MessageBroadcast.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.11, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.osx-arm64",
+              "version": "[8.0.11, 8.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.osx-arm64",
+              "version": "[8.0.11, 8.0.11]"
+            }
+          ],
+          "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
@@ -75,7 +155,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/9.0.6/libexec/sdk/9.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/alexk/.dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -97,15 +177,14 @@
           "/Users/alexk/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
-          "/opt/homebrew/Cellar/dotnet/9.0.6/libexec/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -118,12 +197,11 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",
@@ -140,7 +218,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/9.0.6/libexec/sdk/9.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/alexk/.dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -160,13 +238,18 @@
           "net8.0"
         ],
         "sources": {
-          "/opt/homebrew/Cellar/dotnet/9.0.6/libexec/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Client/MessageBroadcast.Client.csproj": {
+                "projectPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Client/MessageBroadcast.Client.csproj"
+              },
+              "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/MessageBroadcast.Shared.csproj": {
+                "projectPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/src/MessageBroadcast.Shared/MessageBroadcast.Shared.csproj"
+              },
               "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/tests/MessageBroadcast.Server.Tests/MessageBroadcast.Server.Tests.csproj": {
                 "projectPath": "/Users/alexk/Projects/dotnet/MessageBroadcast/MessageBroadcast/tests/MessageBroadcast.Server.Tests/MessageBroadcast.Server.Tests.csproj"
               }
@@ -182,8 +265,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -217,22 +299,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/9.0.6/libexec/sdk/9.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/alexk/.dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -252,7 +324,6 @@
           "net8.0"
         ],
         "sources": {
-          "/opt/homebrew/Cellar/dotnet/9.0.6/libexec/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -277,8 +348,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -312,22 +382,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/9.0.6/libexec/sdk/9.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/alexk/.dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
